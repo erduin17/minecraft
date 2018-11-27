@@ -1,23 +1,23 @@
+# Make sure to keep up on the slime anime it is super good! -noah
 from mcpi.minecraft import Minecraft
-from mcpi import block	  
+from mcpi import block
+from time import sleep
 
 air = 0
+flower = 38
 
 mc = Minecraft.create()
-
-mc.player.setPos(0,0,0)
                                             
 x, y, z = mc.player.getPos()  
 zz = z + 1
 
 mc.setBlocks(-100,-100, -100, 100, 100, 100, block.AIR.id)
-
 mc.setBlocks(x,y, zz, x+100, y+0, zz+100, block.STONE.id)
-mc.setBlock (1, 1, 1, 10)
 
 while True:
-    mc.setBlock(x, y-2, z, air)
-		
+    x, y, z = mc.player.getPos()
+    mc.setBlock(x, y-1, z, block.AIR.id)
+    sleep(0.5)		
 
 	
 	
