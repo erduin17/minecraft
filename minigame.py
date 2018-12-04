@@ -65,6 +65,8 @@ mc.setBlocks(51,18, -1, 51, 18, 50, block.GLASS.id)
 mc.setBlocks(51,21, -1, 51, 21, 50, block.GLASS.id)
 mc.setBlocks(51,23, -1, 51, 23, 50, block.GLASS.id)
 
+mc.player.setPos(25, 25,25 )
+
 
 while True:
     x, y, z = mc.player.getPos()
